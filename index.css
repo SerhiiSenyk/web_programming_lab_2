@@ -1,77 +1,7 @@
-body {
-    padding: 0;
-    margin: 0;
-    font-family: "Verdana";
-}
-ul.navTab{
-    padding-left:10px;
-    margin: 0px;
-    background-color: #bac2bf1a;
-    color:black;
-    height:75px;
-
-    list-style: none;
-}
-.navTab li { 
-    float: left;
-}
-ul.navTab a {
-    display: block;
-    padding: 28px 50px;
-    border-right: 0.5px solid rgb(235, 238, 234);
-    border-left: 0.5px solid rgb(235, 238, 234);
-    color: #333;
-    text-align: center;
-    text-decoration: none;
-   
-}
-ul.navTab a:hover{
-    background-color: #b0b6b41a;
-    color: #333;
-}
-
-ul.dropdown {
-    display: none;
-    position: absolute;
-    padding: 0px;
-    margin: 0 0px;
-    background-color: rgba(252, 253, 253, 0.596);
-}
-.dropdown li {
-   float:none;   
-   list-style: none;
-}
-.dropdown li a{
-    padding:15px 20px;
-    width: 150px;
-    border-top: 0.5px solid rgb(235, 238, 234);
-    border-bottom: 0.5px solid rgb(235, 238, 234);
-    text-align: left;
-}
-
-ul.navTab > li:hover > .dropdown {
-    display: block;
-}
-
-#logo {
-    padding-left:10px;
-    margin-right:80px;
-    float:left;
-    height: 12vh;
-}
 
 content{
     padding-top: 50px;
     padding-bottom: 50px;
-}
-footer{
-    padding-top: 40px;
-    padding-bottom: 0px;
-    border-top: 1px solid rgb(235, 238, 234);
-    height: 50px;
-    width: 100%;
-    background-color: rgb(187, 190, 194);
-    text-align: center;
 }
 
 #band{
@@ -99,10 +29,3 @@ h2{
 #album{
     text-align: center;
 }
-
-@font-face {
-    font-family: "Verdana"; 
-    src: url("../fonts/verdana.ttf") format("truetype"); 
-    font-style: normal; 
-    font-weight: normal; 
-} 
