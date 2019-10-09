@@ -3,35 +3,37 @@ body {
     margin: 0;
     font-family: "Verdana";
 }
-ul.navTab{
-    padding-left:10px;
-    margin: 0px;
-    background-color: #bac2bf1a;
-    color:black;
-    height:75px;
 
+header{
+    background-color: #bac2bf1a;
+    height:75px;
+}
+ul.navTab{
+    float:right;
     list-style: none;
+    margin: 0px;
 }
 .navTab li { 
     float: left;
 }
 ul.navTab a {
     display: block;
+    text-decoration: none;
+    color: #333;
     padding: 28px 50px;
+    text-align: center;
     border-right: 0.5px solid rgb(235, 238, 234);
     border-left: 0.5px solid rgb(235, 238, 234);
-    color: #333;
-    text-align: center;
-    text-decoration: none;
-   
 }
 ul.navTab a:hover{
     background-color: #b0b6b41a;
-    color: #333;
+    color: rgb(226, 27, 27);
+    font-size:16.2px;
+    transition: 0.5s;
 }
 
 ul.dropdown {
-    display: none;
+    visibility:hidden;
     position: absolute;
     padding: 0px;
     margin: 0 0px;
@@ -42,61 +44,51 @@ ul.dropdown {
    list-style: none;
 }
 .dropdown li a{
-    padding:15px 20px;
-    width: 150px;
     border-top: 0.5px solid rgb(235, 238, 234);
     border-bottom: 0.5px solid rgb(235, 238, 234);
+    padding:15px 20px;
+    width: 150px;
     text-align: left;
 }
 
 ul.navTab > li:hover > .dropdown {
-    display: block;
+    opacity: 1;
+    visibility: visible;
+    transition-delay:250ms;
 }
 
 #logo {
-    padding-left:10px;
-    margin-right:80px;
+    position:absolute;
     float:left;
     height: 12vh;
+    padding-left:10px;
+    margin-right:80px;
+    animation-name: animation_logo;
+    animation-iteration-count: infinite;
+    animation-duration: 10s;
+    animation-timing-function: ease-in-out;
+    /* animation-direction: alternate; */
 }
 
-content{
-    padding-top: 50px;
-    padding-bottom: 50px;
+@keyframes animation_logo{
+    0%{
+        left:-130px;
+    }
+    50%{
+        left:120px;
+    }
+    100%{
+        left:-130px;
+    }
 }
+
 footer{
-    padding-top: 40px;
-    padding-bottom: 0px;
     border-top: 1px solid rgb(235, 238, 234);
+    background-color: rgb(187, 190, 194);
     height: 50px;
     width: 100%;
-    background-color: rgb(187, 190, 194);
-    text-align: center;
-}
-
-#band{
-    display:block; margin:0 auto;
-    padding-bottom: 50px;
-    padding-top: 1px;
-}
-
-article{
-    max-width: 90%;
-    padding-left: 80px;
-    padding-right: 80px;
-    word-spacing: 2px;
-    line-height: 1.4;
-    text-indent:30px;
-}
-
-div.about_group{
-    background-color: rgb(241, 243, 243);
-}
-
-h2{
-    text-align: center;
-}
-#album{
+    padding-top: 40px;
+    padding-bottom: 0px;
     text-align: center;
 }
 
