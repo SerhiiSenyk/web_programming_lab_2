@@ -1,0 +1,100 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: "Verdana";
+}
+
+header{
+    background-color: #bac2bf1a;
+    height:75px;
+}
+ul.navTab{
+    float:right;
+    list-style: none;
+    margin: 0px;
+}
+.navTab li { 
+    float: left;
+}
+ul.navTab a {
+    display: block;
+    text-decoration: none;
+    color: #333;
+    padding: 28px 50px;
+    text-align: center;
+    border-right: 0.5px solid rgb(235, 238, 234);
+    border-left: 0.5px solid rgb(235, 238, 234);
+}
+ul.navTab a:hover{
+    background-color: #b0b6b41a;
+    color: rgb(226, 27, 27);
+    font-size:16.2px;
+    transition: 0.5s;
+}
+
+ul.dropdown {
+    visibility:hidden;
+    position: absolute;
+    padding: 0px;
+    margin: 0 0px;
+    background-color: rgba(252, 253, 253, 0.596);
+}
+.dropdown li {
+   float:none;   
+   list-style: none;
+}
+.dropdown li a{
+    border-top: 0.5px solid rgb(235, 238, 234);
+    border-bottom: 0.5px solid rgb(235, 238, 234);
+    padding:15px 20px;
+    width: 150px;
+    text-align: left;
+}
+
+ul.navTab > li:hover > .dropdown {
+    opacity: 1;
+    visibility: visible;
+    transition-delay:250ms;
+}
+
+#logo {
+    position:absolute;
+    float:left;
+    height: 12vh;
+    padding-left:10px;
+    margin-right:80px;
+    animation-name: animation_logo;
+    animation-iteration-count: infinite;
+    animation-duration: 10s;
+    animation-timing-function: ease-in-out;
+    /* animation-direction: alternate; */
+}
+
+@keyframes animation_logo{
+    0%{
+        left:-130px;
+    }
+    50%{
+        left:120px;
+    }
+    100%{
+        left:-130px;
+    }
+}
+
+footer{
+    border-top: 1px solid rgb(235, 238, 234);
+    background-color: rgb(187, 190, 194);
+    height: 50px;
+    width: 100%;
+    padding-top: 40px;
+    padding-bottom: 0px;
+    text-align: center;
+}
+
+@font-face {
+    font-family: "Verdana"; 
+    src: url("../fonts/verdana.ttf") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal; 
+} 
