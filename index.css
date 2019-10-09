@@ -5,23 +5,25 @@ body {
 }
 ul.navTab{
     padding-left:10px;
-    list-style: none;
-    color:black;
     margin: 0px;
     background-color: #bac2bf1a;
+    color:black;
     height:75px;
+
+    list-style: none;
 }
 .navTab li { 
     float: left;
 }
 ul.navTab a {
     display: block;
-    text-decoration: none;
-    color: #333;
     padding: 28px 50px;
-    text-align: center;
     border-right: 0.5px solid rgb(235, 238, 234);
     border-left: 0.5px solid rgb(235, 238, 234);
+    color: #333;
+    text-align: center;
+    text-decoration: none;
+   
 }
 ul.navTab a:hover{
     background-color: #b0b6b41a;
@@ -40,10 +42,10 @@ ul.dropdown {
    list-style: none;
 }
 .dropdown li a{
-    border-top: 0.5px solid rgb(235, 238, 234);
-    border-bottom: 0.5px solid rgb(235, 238, 234);
     padding:15px 20px;
     width: 150px;
+    border-top: 0.5px solid rgb(235, 238, 234);
+    border-bottom: 0.5px solid rgb(235, 238, 234);
     text-align: left;
 }
 
@@ -52,10 +54,10 @@ ul.navTab > li:hover > .dropdown {
 }
 
 #logo {
-    height: 12vh;
-    float:left;
     padding-left:10px;
     margin-right:80px;
+    float:left;
+    height: 12vh;
 }
 
 content{
@@ -63,12 +65,12 @@ content{
     padding-bottom: 50px;
 }
 footer{
-    border-top: 1px solid rgb(235, 238, 234);
-    background-color: rgb(187, 190, 194);
-    height: 50px;
-    width: 100%;
     padding-top: 40px;
     padding-bottom: 0px;
+    border-top: 1px solid rgb(235, 238, 234);
+    height: 50px;
+    width: 100%;
+    background-color: rgb(187, 190, 194);
     text-align: center;
 }
 
