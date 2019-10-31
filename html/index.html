@@ -2,29 +2,49 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Beatles</title>
     <!-- <link rel="shortcut icon" href="images/favicon(1).ico" /> -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="bootstrap-4.3.1/css/bootstrap.min.css">
+    <script src="bootstrap-4.3.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/index.css">
 </head>
 <body>
     <header>
-        <img alt="Logo" id="logo" src="../images/logo1.png">
-        <nav>
-            <ul class="navTab">
-                <li><a href="#">Main</a></li>
-                <li><a href="#">News</a></li>
-                <li><a href="#">For fans</a>
-                <ul class="dropdown">
-                    <li><a href="#">Fan club</a></li>
-                    <li><a href="#">Tour schedule</a></li>
-                    <li><a href="#">Lyrics</a></li>
+        <nav class = "navbar-expand-md navbar-light bg-light navbar">
+                <img class="navbar-brand" alt="Logo" id="logo" src="../images/logo1.png">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+                    <div class="navbar-toggler-icon"></div>
+                </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav" id="navTab">
+                <li class="nav-item"><a class="nav-link" href="#">Main</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">News</a></li>
+
+                <li class="nav-item"><a class="nav-link" href="#">For fans</a>
+                
+                <ul  id="dropdown">
+                    <li class="nav-item"><a class="nav-link" href="#">Fan club</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Tour schedule</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Lyrics</a></li>
                 </ul></li>
-                <li><a href="#">Fans appeal</a></li>
-                <li><a href="concertVenue.html">Concert venue</a></li>
-                <li style="float:right"><a href="#">Admin</a></li>
+        
+
+                <li class="nav-item "><a class="nav-link" href="#">Fans appeal</a></li>
+                <li class="nav-item"><a class="nav-link" href="concertVenue.html">Concert venue</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Admin</a></li>
             </ul>
+            </div>
         </nav>
+         
     </header>
      <content>
         <img src="../images/Beatles_1965.jpg" alt="Band" id="band">
@@ -64,12 +84,13 @@
         </article>
     </div>
     <div>
-        <article>
+        
             <h2>Best album</h2>
             <figure id="album"><figcaption>
             <image src="../images/Beatles_-_Abbey_Road.jpg" alt="Album" id="album"></image><br>
             <em>Abbey Road(1969)</em>
             </figcaption></figure>
+            <article>
             <p>
                 Abbey Road is the eleventh studio album by English rock band the Beatles, released on 26 September 1969 by Apple Records.
                 The recording sessions were the last in which all four Beatles participated. Let It Be was the final album that the 
