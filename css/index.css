@@ -1,31 +1,35 @@
-
-content{
-    padding-top: 50px;
-    padding-bottom: 50px;
-}
-
 #band{
     display:block; margin:0 auto;
-    padding-bottom: 50px;
+    /* margin-top:20px; */
+    margin-top:4vw;
+    max-width: 100%;
+    padding-bottom: 30px;
     padding-top: 1px;
 }
 
 article{
-    max-width: 90%;
-    padding-left: 80px;
-    padding-right: 80px;
-    word-spacing: 2px;
+    max-width: 100%;
+    padding-left: 8vw;
+    padding-right: 8vw;
+    word-spacing: 2px; 
     line-height: 1.4;
     text-indent:30px;
+    text-align:justify;
+    font-size: medium;
 }
 
 div.about_group{
     background-color: rgb(241, 243, 243);
+    width: 100%;
 }
 
 h2{
     text-align: center;
 }
+
 #album{
+    display:block; margin:0 auto;
+    max-width: 100%;
+    padding-top: 1px;
     text-align: center;
 }

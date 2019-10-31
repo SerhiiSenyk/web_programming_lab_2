@@ -1,10 +1,13 @@
-
 h1,h2,h3{
     text-align: center;
 }
 
 #map{
     display:block; margin:0 auto;
+    margin-top:4vw;
+    max-width: 100%;
+    padding-bottom: 30px;
+    padding-top: 1px;
 }
 
 .details{
@@ -38,6 +41,8 @@ button:hover{
 }
 
 .main-text{ 
+    margin-top: 30px;
+    /* position:relative; */
     animation-name:main-animation;
     animation-duration: 5s;
     animation-iteration-count:1;    
@@ -51,6 +56,5 @@ button:hover{
         color: black;
     }
 }
-
 
 

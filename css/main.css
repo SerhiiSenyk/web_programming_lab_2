@@ -1,68 +1,98 @@
 body {
     padding: 0;
     margin: 0;
+    max-width: 100%;
     font-family: "Verdana";
 }
 
 header{
     background-color: #bac2bf1a;
-    height:75px;
+    height:80px;
+    padding-top :0px;
+
 }
-ul.navTab{
-    float:right;
+
+header nav{
+    padding-top :0px;
+}
+
+nav div{
+    float: right;
+    position:relative;
+    /* background-color:green; */
+}
+
+#navTab{
     list-style: none;
     margin: 0px;
 }
-.navTab li { 
+#navTab li {
     float: left;
+    background-color: #bac2bf1a;
 }
-ul.navTab a {
+#navTab a {
     display: block;
     text-decoration: none;
     color: #333;
-    padding: 28px 50px;
-    text-align: center;
+    padding: 28px 3.2vw;
+    text-align: left;
     border-right: 0.5px solid rgb(235, 238, 234);
     border-left: 0.5px solid rgb(235, 238, 234);
+    border-top: 0.5px solid rgb(221, 223, 220);
 }
-ul.navTab a:hover{
+#navTab a:hover{
     background-color: #b0b6b41a;
     color: rgb(226, 27, 27);
     font-size:16.2px;
     transition: 0.5s;
 }
 
-ul.dropdown {
-    visibility:hidden;
+#dropdown {
+    /* visibility:hidden; */
+    display: none;
     position: absolute;
     padding: 0px;
     margin: 0 0px;
-    background-color: rgba(252, 253, 253, 0.596);
+    background-color: rgba(239, 241, 241, 0.377);
+
+
 }
-.dropdown li {
-   float:none;   
+#dropdown li {
+   float:none;
    list-style: none;
 }
-.dropdown li a{
+
+@media (max-width: 767px){
+    #dropdown{
+        background-color: rgb(216, 218, 218);
+    }
+    ul#navTab > li:hover > #dropdown{
+        left:30vw;
+    }
+}
+
+#dropdown li a{
     border-top: 0.5px solid rgb(235, 238, 234);
     border-bottom: 0.5px solid rgb(235, 238, 234);
     padding:15px 20px;
-    width: 150px;
+    width: 200px;
     text-align: left;
+
 }
 
-ul.navTab > li:hover > .dropdown {
+ul#navTab > li:hover > #dropdown {
     opacity: 1;
     visibility: visible;
+    display:block;
     transition-delay:250ms;
 }
 
 #logo {
-    position:absolute;
+    position: relative;
     float:left;
-    height: 12vh;
-    padding-left:10px;
-    margin-right:80px;
+    height: 80px;
+    padding-left:1vw;
+    margin-right:3vw;
     animation-name: animation_logo;
     animation-iteration-count: infinite;
     animation-duration: 10s;
@@ -72,29 +102,28 @@ ul.navTab > li:hover > .dropdown {
 
 @keyframes animation_logo{
     0%{
-        left:-130px;
+        left:-150px;
     }
     50%{
-        left:120px;
+        left:30px;
     }
     100%{
-        left:-130px;
+        left:-150px;
     }
+}
+
+content{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    width: 100%;
 }
 
 footer{
     border-top: 1px solid rgb(235, 238, 234);
     background-color: rgb(187, 190, 194);
     height: 50px;
-    width: 100%;
-    padding-top: 40px;
+    width: 100% auto;
+    padding-top: 10px;
     padding-bottom: 0px;
     text-align: center;
 }
-
-@font-face {
-    font-family: "Verdana"; 
-    src: url("../fonts/verdana.ttf") format("truetype"); 
-    font-style: normal; 
-    font-weight: normal; 
-} 
