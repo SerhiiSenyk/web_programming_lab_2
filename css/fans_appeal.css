@@ -1,0 +1,28 @@
+.fans-appeal{
+    margin-top:1vw;
+    width: 100%;
+    padding-bottom: 30px;
+    padding-left:40px;
+    padding-right:40px;
+    padding-top: 1px;
+}
+
+.card{
+    border-radius: 4px;
+    padding: 10px;
+    float:left;
+    display:block; margin:0 auto;
+}
+
+
+textarea, label{
+    border-radius: 4px;
+    height: 9rem;
+    width: 99%;
+}
+
+.send{
+    border-radius: 4px;
+    height: 35px;
+    float:right;
+}

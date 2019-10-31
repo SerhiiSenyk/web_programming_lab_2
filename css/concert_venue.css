@@ -1,0 +1,51 @@
+h1,h2,h3,h4{
+    text-align: center;
+}
+
+#map{
+    display:block; margin:0 auto;
+    margin-top:2vw;
+    max-width: 100%;
+    padding-bottom: 30px;
+    padding-top: 1px;
+}
+
+.details{
+    margin-top: 20px;
+    width:100%;
+    border-top: 0.5px solid rgb(235, 238, 234);
+    border-bottom: 0.5px solid rgb(235, 238, 234);
+    background-color: rgb(241, 243, 243);
+    text-align:left;
+    
+}
+
+.details p{
+   padding-left: 20vw;;
+   line-height: 1.4;
+}
+
+.button{
+    height: 2em;
+    margin-top:10px;
+    padding: 10px;
+}
+
+.main-text{ 
+    margin-top: 40px;
+    /* position:relative; */
+    animation-name:main-animation;
+    animation-duration: 5s;
+    animation-iteration-count:1;    
+}
+
+@keyframes main-animation{
+    0%{
+        color: white;
+    }
+    100%{
+        color: black;
+    }
+}
+
+
