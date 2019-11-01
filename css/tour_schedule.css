@@ -1,0 +1,17 @@
+
+
+.schedule{
+    display:block; margin:0 auto;
+    padding-left: 6vw;
+    padding-right: 6vw;
+    padding-top: 20px;
+}
+
+
+#tour{
+    display:block; margin:0 auto;
+    margin-top:1px;
+    max-width: 100%;
+    padding-bottom: 20px;
+    padding-top: 1px;
+}

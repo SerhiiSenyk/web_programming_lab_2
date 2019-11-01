@@ -9,11 +9,11 @@ header{
     background-color: #bac2bf1a;
     height:80px;
     padding-top :0px;
-
 }
 
 header nav{
     padding-top :0px;
+    z-index: 10;
 }
 
 nav div{
@@ -48,13 +48,13 @@ nav div{
 }
 
 #dropdown {
-    /* visibility:hidden; */
-    display: none;
+    visibility:hidden;
+    /* display: none; */
     position: absolute;
     padding: 0px;
     margin: 0 0px;
-    background-color: rgba(239, 241, 241, 0.377);
-
+    background-color: rgba(239, 241, 241, 0.404);
+    z-index: 10;
 
 }
 #dropdown li {
@@ -121,9 +121,26 @@ content{
 footer{
     border-top: 1px solid rgb(235, 238, 234);
     background-color: rgb(187, 190, 194);
-    height: 50px;
+    height: 70px;
     width: 100% auto;
     padding-top: 10px;
     padding-bottom: 0px;
     text-align: center;
 }
+
+
+.button{
+    height: 5em;
+    border-radius: 4px;
+    background-color: white;
+    border: solid 1px rgba(107, 104, 104, 0.51);
+    border-radius: 8px;
+    padding: 2px;
+}
+
+.button:hover{
+    background-color: rgb(238, 241, 240);
+    color: rgb(226, 27, 27);
+    transition: 0.5s;
+}
+
