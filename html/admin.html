@@ -40,25 +40,23 @@
     </header>
     <content>
         <div class="container"> 
-                <div class="row">    
-                        <button class="button col-2" type="button"><h6>Add image</h6></button> 
+                <div class="row"> 
+                    <input type="file" class="form-control-file" id="add-image-button" hidden="hidden">   
+                    <button class="button col-2" type="button" onclick="addImage()"><h6>Add image</h6></button> 
                     <div class="col-10 form">
-                            <img class="image col-4" src="../images/insert_image.png" alt="">
+                        <img class="image col-4" id="news-image" src="../images/insert_image.png" alt="insert">
                     </div>
-                        <div class="file col-12 form">
-                            <input type="file" class="form-control-file" id="exampleFormControlFile1">
-                        </div>
                 </div>
             </div>
         </div>
             <div class="container">
                     <div class="row">          
-                            <button class="button col-2" type="button"><h6>Send</h6></button>  
+                        <button class="button col-2" type="button" id="send-news-button" onclick="sendNews()"><h6>Send</h6></button>  
                         <form class="col-10 form">
                             <label class="form-row">
-                                <textarea placeholder="News title"></textarea>
+                                <textarea id = "news-title" placeholder="News title"></textarea>
                             </label>
-                            <label class="form-row">
+                            <label class="form-row" >
                                 <textarea id="news" placeholder="News body"></textarea>
                             </label>
                         </form>
@@ -68,5 +66,6 @@
     <footer>
         <p>Author Serhii Senyk</p>
     </footer>
+    <script src="../js/admin.js"></script>
 </body>
 </html>
