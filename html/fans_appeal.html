@@ -1,93 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fans appeal</title>
-    <!-- <link rel="shortcut icon" href="images/favicon(1).ico" /> -->
+    <link rel="shortcut icon" href="../images/favicon(1).ico" />
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/fans_appeal.css">
 
 </head>
+
 <body>
     <header>
-        <nav class = "navbar-expand-md navbar-light bg-light navbar">
-                <img class="navbar-brand" alt="Logo" id="logo" src="../images/logo1.png">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
-                    <div class="navbar-toggler-icon"></div>
-                </button>
+        <nav class="navbar-expand-md navbar-light bg-light navbar">
+            <img class="navbar-brand" alt="Logo" id="logo" src="../images/logo1.png">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+                <div class="navbar-toggler-icon"></div>
+            </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav" id="navTab">
-                <li class="nav-item"><a class="nav-link" href="../index.html">Main</a></li>
-                <li class="nav-item"><a class="nav-link" href="news.html">News</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">For fans</a> 
-                <ul  id="dropdown">
-                    <li class="nav-item"><a class="nav-link" href="fan_club.html">Fan club</a></li>
-                    <li class="nav-item"><a class="nav-link" href="tour_schedule.html">Tour schedule</a></li>
-                    <li class="nav-item"><a class="nav-link" href="lyrics.html">Lyrics</a></li>
-                </ul></li>
-                <li class="nav-item "><a class="nav-link" href="fans_appeal.html">Fans appeal</a></li>
-                <li class="nav-item"><a class="nav-link" href="concert_venue.html">Concert venue</a></li>
-                <li class="nav-item"><a class="nav-link" href="admin.html">Admin</a></li>
-            </ul>
+                <ul class="navbar-nav" id="navTab">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Main</a></li>
+                    <li class="nav-item"><a class="nav-link" href="news.html">News</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">For fans</a>
+                        <ul id="dropdown">
+                            <li class="nav-item"><a class="nav-link" href="fan_club.html">Fan club</a></li>
+                            <li class="nav-item"><a class="nav-link" href="tour_schedule.html">Tour schedule</a></li>
+                            <li class="nav-item"><a class="nav-link" href="lyrics.html">Lyrics</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item "><a class="nav-link" href="fans_appeal.html">Fans appeal</a></li>
+                    <li class="nav-item"><a class="nav-link" href="concert_venue.html">Concert venue</a></li>
+                    <li class="nav-item"><a class="nav-link" href="admin.html">Admin</a></li>
+                </ul>
             </div>
-        </nav>   
+        </nav>
     </header>
-     <content>
-         
-     <div class="fans-appeal">
-        <div id = "appeals">
-            <div class="container">
-                <hr class="row">
-                <div class="row">
-                    <div class="card">
-                        <p class="card-text">Fan name<br>22:22<br>18.09.14</p> 
-                    </div>
-                    <div class="card col-8">
-                        <article class="card-text">
-                            edcedcedcedc
-                        </article>
-                    </div>
-                </div>
-            </div>
+    <content>
 
+        <div class="fans-appeal">
+            <div id="appeals">
+                <div class="container">
+                    <hr class="row">
+                    <div class="row">
+                        <div class="card">
+                            <p class="card-text">Fan name<br>22:22<br>18.09.14</p>
+                        </div>
+                        <div class="card col-8">
+                            <article class="card-text">
+                                edcedcedcedc
+                            </article>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <hr class="row">
+                    <div class="row">
+                        <div class="card">
+                            <p class="card-text">Fan name<br>22:22<br>18.09.14</p>
+                        </div>
+                        <div class="card col-8">
+                            <article class="card-text">
+                                edcedcedcedc
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="container">
                 <hr class="row">
                 <div class="row">
-                    <div class="card">
-                        <p class="card-text">Fan name<br>22:22<br>18.09.14</p> 
-                    </div>
-                    <div class="card col-8">
-                        <article class="card-text">
-                            edcedcedcedc
-                        </article>
+                    <button class="button col-2 align-bottom " id="addFansAppeal">Send</button>
+                    <div class="col-10 form">
+                        <form class="form-row">
+                            <label>
+                                <textarea id="comment" placeholder="Write an appeal... "></textarea>
+                            </label>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="container">
-            <hr class="row">
-            <div class="row">
-                <button class="button col-2 align-bottom " onclick="addFansAppeal()">Send</button>
-                <div class="col-10 form">
-                    <form class="form-row">
-                        <label>
-                            <textarea id="comment" placeholder="Write an appeal... "></textarea>
-                        </label>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
     </content>
     <footer>
         <p>Author Serhii Senyk</p>
     </footer>
-   <script src="../js/fans_appeal.js"></script>
+    <script src="../js/storage_classes.js"></script>
+    <script src="../js/fans_appeal.js"></script>
 </body>
+
 </html>
