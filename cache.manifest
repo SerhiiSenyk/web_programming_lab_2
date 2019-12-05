@@ -1,8 +1,7 @@
 CACHE MANIFEST
-# 18-10-2019 v0.1
+# 04-12-2019 v0.3
 
 CACHE:
-https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css
 
 index.html
 html/fans_appeal.html
@@ -13,12 +12,16 @@ error.html
 js/news.js
 js/admin.js
 js/fans_appeal.js
+js/storage_classes.js
+bootstrap/js/bootstrap.min.js
+
 
 css/main.css
 css/index.css
 css/fans_appeal.css
 css/admin.css
 css/news.css
+bootstrap/css/bootstrap.min.css
 
 images/Beatles-st-pepper.jpg
 
