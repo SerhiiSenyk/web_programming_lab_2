@@ -5,15 +5,19 @@ CACHE:
 https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css
 
 index.html
-html/concert_venue.html
-html/tour_schedule.html
+html/fans_appeal.html
 html/news.html
+html/admin.html
 error.html
+
+js/news.js
+js/admin.js
+js/fans_appeal.js
 
 css/main.css
 css/index.css
-css/concert_venue.css
-css/tour_schedule.css
+css/fans_appeal.css
+css/admin.css
 css/news.css
 
 images/Beatles-st-pepper.jpg
