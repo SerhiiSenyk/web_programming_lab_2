@@ -3,10 +3,6 @@ function isOnline() {
     return window.navigator.onLine;
 }
 
-function sendToServer() {
-    alert("Sent to server");
-}
-
 class LocalStorage {
     constructor() {
     }

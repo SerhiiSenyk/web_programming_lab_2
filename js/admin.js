@@ -5,6 +5,19 @@ document.addEventListener("DOMContentLoaded", function () {
     var news = [];
     var newsImage = document.getElementById("news-image");
 
+    window.addEventListener("online", function (event) {
+        storage.storage.get(key, function ($news) {
+            if ($news) {
+                all_news = $news;
+                all_news.forEach(function (news) {
+                    sendToServer(news.imgSrc, news.titleText, news.bodyText);
+                });
+            }
+            storage.storage.delete(key);
+            all_news = [];
+        });
+    });
+
     function validateInput(text) { return (text === "") ? false : true; }
 
 
@@ -18,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    if(isOnline()){
+    if (isOnline()) {
         storage.storage.get(key, ($news) => {
             if ($news != null) {
                 news = $news;
@@ -32,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     document.getElementById("send-news-button").addEventListener('click', function () {
-        //var imageSrc = document.getElementById("news-image").getAttribute("src");
+        var imageSrc = document.getElementById("news-image").getAttribute("src");
         var b64image = getBase64Image(newsImage);
         const newsBody = document.getElementById("news");
         const newsTitle = document.getElementById("news-title");
@@ -46,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
             alert("no image added");
         } else {
             if (isOnline()) {
-                sendToServer();
+                sendToServer(b64image, newsTitle.value.trim(), newsBody.value.trim());
             } else {
                 news.push({
                     imgSrc: b64image,
@@ -65,12 +78,33 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function getBase64Image(img) {
         var canvas = document.createElement("canvas");
-        canvas.width = img.width*8;
-        canvas.height = img.height*8;
+        canvas.width = img.naturalWidth;
+        canvas.height = img.naturalHeight;
         var context = canvas.getContext("2d");
         context.drawImage(img, 0, 0);
         var dataURL = canvas.toDataURL("image/png");
         return dataURL;
+    }
+
+    function sendToServer(imgSrc, titleText, bodyText) {
+        try {
+            fetch("/news", {
+                method: "POST",
+                headers: {
+                    "Content-type": "application/json"
+                },
+                body: JSON.stringify({
+                    imgSrc: imgSrc,
+                    titleText: titleText,
+                    bodyText: bodyText
+                }),
+            })
+            alert("News sent to server!");
+        }
+        catch{
+            (error => console.error(error));
+        }
+
     }
 
 });
