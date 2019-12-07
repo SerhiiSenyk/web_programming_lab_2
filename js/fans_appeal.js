@@ -3,27 +3,34 @@
 const key = "fans_appeal";
 document.addEventListener("DOMContentLoaded", function () {
     var fansAppeals = [];
+
     window.addEventListener("online", function (event) {
         storage.storage.get(key, (appeals) => {
+            //storage.storage.delete(key);
             if (appeals) {
                 fansAppeals = appeals;
                 fansAppeals.forEach(function (appeal) {
-                    showAppealOnPage(appeal.text, appeal.date)
+                    sendToServer(appeal.text, appeal.date);
+                    //showAppealOnPage(appeal.text, appeal.date);
                 });
             }
             storage.storage.delete(key);
-            sendToServer();
             fansAppeals = [];
+            window.location.reload();
         });
+        getFromServer();
     });
 
     if (isOnline()) {
-        fansAppeals.forEach(function (appeal) {
-            showAppealOnPage(appeal.text, appeal.date)
-        });
+        if (fansAppeals) {
+            fansAppeals.forEach(function (appeal) {
+                //showAppealOnPage(appeal.text, appeal.date)
+                sendToServer(appeal.text, appeal.date);
+            });
+        }
         storage.storage.delete(key);
-        //sendToServer();
         fansAppeals = [];
+        getFromServer();
     }
 
     storage.storage.get(key, (appeals) => {
@@ -46,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
         } else {
             if (isOnline()) {
                 showAppealOnPage(text, date);
-                //sendToServer();
+                sendToServer(text, date);
             } else {
                 fansAppeals.push({ text: text, date: date });
                 storage.storage.add(key, fansAppeals);
@@ -81,6 +88,41 @@ document.addEventListener("DOMContentLoaded", function () {
             (dateTime.getMinutes() < 10 ? "0" : "") + dateTime.getMinutes() + ":" +
             (dateTime.getSeconds() < 10 ? "0" : "") + dateTime.getSeconds() + "<br>" +
             dateTime.getDate() + "." + (dateTime.getMonth() + 1) + "." + dateTime.getFullYear());
+    }
+
+    function sendToServer(text, date) {
+        try {
+            fetch("/appeals", {
+                method: "POST",
+                headers: {
+                    "Content-type": "application/json"
+                },
+                body: JSON.stringify({ text: text, date: date }),
+            })
+            alert("Sent to server!");
+        }
+        catch{
+            (error => console.error(error));
+        }
+    }
+
+    function getFromServer() {
+        const request = new XMLHttpRequest();
+        request.open("GET", "/appeals", true);
+        request.send();
+        request.onreadystatechange = function () {
+            if (request.readyState === XMLHttpRequest.DONE) {
+                if (request.status == 200) {
+                    appeals = JSON.parse(request.responseText);
+                    appeals.forEach(function (appeal) {
+                        showAppealOnPage(appeal.text, appeal.date)
+                    });
+                }
+                else {
+                    alert("Error get from server!");
+                }
+            }
+        }
     }
 
 });
